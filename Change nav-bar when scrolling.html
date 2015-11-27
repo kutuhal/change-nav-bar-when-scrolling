@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	body {
+		margin: 0 0;
+	}
+	#nav-image{
+		background: red;
+		height: 40px;
+		width: 100%;
+		margin: 0 0;
+		position: fixed;
+		display: none;
+	}
+	#nav-bar{
+		background: navy;
+		height: 40px;
+		width: 100%;
+		margin: 0 0;
+		position: fixed;
+	}
+	
+	#container {
+		height: 3000px;
+		width: 100%;
+		border: 1px solid;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).scroll(function() {
+    $('#nav-bar').toggle($(this).scrollTop() < 150);  // hides this div when scolling beyong 150
+    $('#nav-image').toggle($(this).scrollTop() > 150); //shows this div when scrolling beyond 150
+
+});
+</script>
+</head>
+<body>
+<div id ='nav-image'>
+</div> 
+<div id='nav-bar'>
+</div>
+<div id ='container'> <!-- This container helps us to scroll down because it has a height of 3000px-->
+	
+</div>
+
+</body>
+</html>
